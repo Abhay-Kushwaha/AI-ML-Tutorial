@@ -34,3 +34,14 @@ C) Automated Feature Selection Methods- Recursive function Elimination(RFE), Les
     Ridge Regression- When you want all feature but it needed too be shrunk 
 
 
+Accuracy= (TP+TN)/ (TP+TN+FP+FN)
+Precison= TP/(TP+FP)
+Recall(sensitivity)= TP/(TP+FN)
+F1 Score= 2* (Precison*Recall)/(Precison+Recall)
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+Logistic Reegression:
+
+Types- Binomial, Multinomial, Ordinal
+Assumptions- Independent observations, Binary dependent variables, No outliers, Large dataset
