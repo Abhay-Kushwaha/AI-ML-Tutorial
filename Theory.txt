@@ -1,39 +1,60 @@
-ASSUMPTIONS IN LINEAR REGRESSION:
-1) Linearity- y predicted and ploted to check the linearity
-2) Homoscopseedasticity- (Constant Varianceof Error) Breusch-Page test and White test is used
-3) Normality of Error- Anderson Darling test is used
-4) Independance on Error- Durbin Whatson test is used
-5) No Multicollinearity- Variance Inflation Factor (VIF) used to check
-6) No Influential Outliers- used Cook's Distance and 
+📘 LINEAR REGRESSION
 
-Cost Function- Mean Square Error 
-Hypothesis Function- assumptions relation between X an Y    { h0(x)=0o+01x }
+📌Assumptions in Linear Regression:
+1)Linearity- The relationship between the independent (X) and dependent (Y) variables should be linear. Check using scatter plots or residual plots.
+2) Homoscedasticity (Constant Variance of Error)- The variance of residuals should remain constant for all values of X. Tests: Breusch-Pagan Test, White Test, Plot: Residual vs Fitted values plot.
+3) Normality of Error Terms- Residuals should be normally distributed. Test: Anderson-Darling Test, Shapiro-Wilk, Q-Q Plot.
+4) Independence of Error Terms- Error terms should be independent across observations. Test: Durbin-Watson Test.
+5) No Multicollinearity- Independent variables should not be highly correlated. Test: Variance Inflation Factor (VIF) (VIF > 5 or 10 → multicollinearity present).
+6) No Influential Outliers- Outliers that have a large impact on the model should be identified and handled.Method: Cook’s Distance, Leverage score.
+
+📌Cost Function (Loss Function):
+1) Mean Square Error- Used to evaluate the performance of the model:{ h0(x)=0o+01x }
+2) Hypothesis Function- Assumptions relation between X an Y
 J(o)= (1/2m) sum{1 to m} (y_true - y_predicted)^2
 
-Visualise cost fuction and Gradient Desecent- The cost function of linear regression is convex (parabolic shape) Gradient-Descent starts at the random point and moves downhill to find the global minimum
-Types: 
-1) Batch-
+📌Visualise Cost fuction and Gradient Desecent:
+1) The Cost function of linear regression is convex (parabolic shape OR U-shape). It ensures global minimum.
+2) Gradient-Descent Starts at the random point and moves downhill to find the global minimum. It minimizes the cost function by iteratively updating parameters.
 
+📌Types of Gradient Descent: 
+1) Batch Gradient Descent – Uses all data points each iteration (stable but slow).
+2) Stochastic Gradient Descent (SGD) – Uses one data point per iteration (faster but noisier).
+3) Mini-batch Gradient Descent – Uses a small batch of data (balance between speed & accuracy).
 
-x= 1, 2, 3 
-Y= 2, 2.8, 3.6
-initially 0o= 0 and 01=0 (m=3)
+📌 Example:
+X = [1, 2, 3]
+Y = [2, 2.8, 3.6]
+Initial: θ₀ = 0, θ₁ = 0, m = 3
 
-Technique of Feature Selection:
-A) Manual Feature Selection
-B) Statistical Method- Corelation anlysis P-value hypothesis testing (p-value > 0.05 for statistically insignificant).  
-                        Remove low variance feature. Solved by ANOVA.
-    Pearson Cprrelation ( r= sum{ (x1-x_mean)(y1-y_mean) }/{ (sum(x1-x_mean)^2 . sum(y1-y_mean)^2)^0.5 })
-    df.corr(method="pearson") - numerical
-    df.corr(method="spearman") - ordinal values
-    df.corr(method="kendall") - ordinal values
-    Variance Threshhold- sum(x1-x)^2 / N
-C) Automated Feature Selection Methods- Recursive function Elimination(RFE), Lesso Regression (unimp feature=0), 
-                                        Feature Importance (Tree Based Model)
-    Lesso Regression- L1 Regularization when you want to remove irrelevant feature
-    Ridge Regression- When you want all feature but it needed too be shrunk 
+📌Technique of Feature Selection:
+A) Manual Feature Selection- Based on domain knowledge and intuition.
 
+B) Statistical Method- 
+    1) Correlation anlysis P-value hypothesis testing (p-value > 0.05 for statistically insignificant).  
+    2) ANOVA: For comparing means across groups.
+    3) Pearson Correlation (numerical)
+    4) Spearman & Kendall Correlation (ordinal)
+    5) Variance Threshold: Removes low variance features.
+        Pearson Cprrelation ( r= sum{ (x1-x_mean)(y1-y_mean) }/{ (sum(x1-x_mean)^2 . sum(y1-y_mean)^2)^0.5 })
+        df.corr(method="pearson") - numerical
+        df.corr(method="spearman") - ordinal values
+        df.corr(method="kendall") - ordinal values
+        Variance Threshhold- sum(x1-x)^2 / N
 
+C) Automated Feature Selection Methods- 
+    1) Recursive Feature Elimination (RFE)
+    2) Lasso Regression (L1 Regularization) – Shrinks less important coefficients to 0.
+    3) Ridge Regression (L2 Regularization) – Shrinks coefficients but doesn’t remove them.
+    4) Tree-Based Feature Importance – Feature importances from decision trees/random forests.
+
+📌Evaluation Metrics for Regression
+1) Mean Squared Error (MSE)
+2) Mean Absolute Error (MAE)
+3) R-squared (R²) – Proportion of variance explained by the model
+4) Adjusted R-squared – Adjusts R² for number of predictors
+
+📌Classification Metrics:
 Accuracy= (TP+TN)/ (TP+TN+FP+FN)
 Precison= TP/(TP+FP)
 Recall(sensitivity)= TP/(TP+FN)
@@ -41,7 +62,38 @@ F1 Score= 2* (Precison*Recall)/(Precison+Recall)
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-Logistic Reegression:
+📘 LOGISTIC REGRESSION
 
-Types- Binomial, Multinomial, Ordinal
-Assumptions- Independent observations, Binary dependent variables, No outliers, Large dataset
+Logistic Regression uses Sigmoid Function to map predictions to a probability between 0 and 1:
+                    𝜎(𝑧)=1 / 1+𝑒−z
+
+
+📌Types:
+1) Binomial: Two categories (e.g., Yes/No)
+2) Multinomial: More than two unordered categories (e.g., Red/Blue/Green)
+3) Ordinal: More than two ordered categories (e.g., Low/Medium/High)
+
+📌Assumptions:
+1) Binary or categorical dependent variable
+2) Independent observations
+3) No multicollinearity
+4) No extreme outliers
+5) Large sample size
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+📘 DECISION TREE
+
+📌Key Concepts:
+1) Recursive Partitioning of data into subsets based on feature values.
+2) Splitting Criteria: Gini Index (used in CART), Entropy / Information Gain (used in ID3)
+
+📌Advantages:
+1) Easy to interpret
+2) Handles both numerical and categorical data
+3) No need for feature scaling
+
+📌Disadvantages:
+1) Prone to overfitting (solved by pruning)
+2) Can be biased with imbalanced datasets
+
