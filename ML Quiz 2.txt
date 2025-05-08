@@ -1,0 +1,61 @@
+Some Questions related to Machine Learning (Logistic Regression)
+
+Q1. Which of the following kernels can transform a non-linearly separable dataset into a linearly separable one?
+→ All of the above
+
+Q2. What role does the 'C' parameter play in SVM?
+→ Regulates the degree of overfitting
+
+Q3. Which optimization technique is commonly used to solve the SVM objective function?
+→ Quadratic Programming
+
+Q4. In SVM, what are support vectors?
+→ Points that define the decision boundary
+
+Q5. Which kernel trick allows SVMs to operate in higher-dimensional spaces without explicit transformation?
+→ Kernel substitution
+
+Q6. The dual formulation of the SVM problem is preferred because:
+→ It scales better with large feature sets
+
+Q7. Which of these kernels is not positive semi-definite and hence not a valid kernel in SVM?
+→ All are valid under certain conditions
+
+Q8. The margin in SVM is defined as:
+→ The distance between support vectors on either side of the hyperplane
+
+Q9. What does a soft margin in SVM allow for?
+→ Misclassification of some training points
+
+Q10. The kernel function k(x, y) in SVM corresponds to which of the following?
+→ An inner product in the transformed feature space
+
+Q11. In the dual form of SVM, Lagrange multipliers αᵢ are non-zero only for:
+→ Support vectors
+
+Q12. Which condition ensures the KKT (Karush-Kuhn-Tucker) optimality in SVM?
+→ All of the above
+
+Q13. Which of the following kernels is best for high-dimensional feature space with low training sample size?
+→ RBF kernel
+
+Q14. The decision function in SVM is most influenced by:
+→ Support vectors only
+
+Q15. Why does the RBF kernel often outperform polynomial kernels?
+→ It generalizes better for many datasets
+
+Q16. In SVMs, slack variables are used to:
+→ Allow soft margin classification
+
+Q17. What happens if the value of parameter C is very large?
+→ Model may overfit
+
+Q18. In practice, what is a challenge of using high-degree polynomial kernels?
+→ Computational complexity and overfitting
+
+Q19. Why are SVMs effective in high-dimensional spaces?
+→ They depend only on support vectors
+
+Q20. Which method is often used to tune hyperparameters in SVM?
+→ Grid Search with Cross-validation
