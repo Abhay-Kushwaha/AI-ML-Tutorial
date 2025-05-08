@@ -1,0 +1,61 @@
+Some Questions related to Machine Learning (Logistic Regression)
+
+1. In logistic regression, what is the range of the hypothesis function output?
+→ [0, 1]
+
+2. Which function is used to map predicted values to probabilities in logistic regression?
+→ Sigmoid
+
+3. What is the cost function typically used in logistic regression?
+→ Log Loss / Cross Entropy
+
+4. What is the derivative of the sigmoid function σ(z) with respect to z?
+→ σ(z) × (1 − σ(z)) (Note: This option was missing in your list, but this is the correct one.)
+
+5. Which of the following is not a valid assumption of logistic regression?
+→ Homoscedasticity
+
+6. In logistic regression, what does a large positive weight signify for a feature?
+→ Strong positive correlation with the probability of class 1
+
+7. Which optimization method is commonly used for training logistic regression?
+→ All of the above
+
+8. In binary logistic regression, what is the logit function defined as?
+→ log(p / (1 − p))
+
+9. What regularization technique helps prevent overfitting in logistic regression?
+→ All of the above
+
+10. Which evaluation metric is most suitable for imbalanced datasets in logistic regression?
+→ F1 Score
+
+11. What is the main difference between linear regression and logistic regression?
+→ All of the above
+
+12. What will be the predicted class label in logistic regression if the sigmoid output is exactly 0.5?
+→ Depends on threshold
+
+13. Multinomial logistic regression is used when:
+→ The output variable has more than two unordered categories
+
+14. Which method is not suitable for feature selection in logistic regression?
+→ PCA without scaling
+
+15. In scikit-learn's LogisticRegression(), what penalty corresponds to L1 regularization?
+→ penalty='l1'
+
+16. The log-likelihood in logistic regression is maximized using which method?
+→ Maximum Likelihood Estimation
+
+17. What happens if multicollinearity exists among features in logistic regression?
+→ Coefficients become unstable
+
+18. Which of the following statements is true about logistic regression decision boundary?
+→ It’s always a hyperplane
+
+19. In logistic regression, overfitting is more likely when:
+→ Too little training data
+
+20. The AUC-ROC curve in logistic regression evaluates:
+→ Trade-off between true positive rate and false positive rate
