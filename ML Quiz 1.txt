@@ -1,0 +1,61 @@
+Some Questions related to Machine Learning (Linear Regression)
+
+Q1. In linear regression, which assumption is made about the relationship between independent and dependent variables?
+→ Linear and homoscedastic
+
+Q2. What does a high Variance Inflation Factor (VIF) indicate in multiple linear regression?
+→ High multicollinearity
+
+Q3. Which of the following methods penalizes the absolute size of the regression coefficients?
+→ Lasso Regression
+
+Q4. Which of the following is not an assumption of the linear regression model?
+→ All independent variables are categorical
+
+Q5. What is the effect of standardizing input variables in regularized linear regression?
+→ Ensures fair penalization of weights
+
+Q6. Which method minimizes the sum of squared residuals?
+→ Ordinary Least Squares
+
+Q7. Which condition would lead to an overfitted linear regression model?
+→ High model complexity on small data
+
+Q8. What does a low p-value (e.g., < 0.05) for a coefficient in linear regression suggest?
+→ Strong evidence to reject the null hypothesis
+
+Q9. Which algorithm is commonly used to compute the coefficients in gradient descent for linear regression?
+→ Partial derivatives of cost function
+
+Q10. Ridge regression adds what type of penalty to the cost function?
+→ L2 penalty
+
+Q11. Which evaluation metric is most sensitive to outliers in linear regression?
+→ Root Mean Squared Error (RMSE)
+
+Q12. In multiple linear regression, what does adjusted R-squared do that R-squared doesn’t?
+→ Adjusts for the number of predictors
+
+Q13. Which regression method is best when most predictors are irrelevant?
+→ Lasso Regression
+
+Q14. What does it mean when the residuals are not randomly scattered around zero?
+→ Model has heteroscedasticity or is misspecified
+
+Q15. What happens to the bias and variance when we use Ridge regression instead of Linear regression?
+→ Bias ↑, Variance ↓
+
+Q16. Which condition indicates that a linear regression model is underfitting?
+→ High bias and low variance
+
+Q17. Which of these is a limitation of using R-squared for model selection?
+→ It always increases with more variables
+
+Q18. What type of variable can linear regression NOT handle without preprocessing?
+→ Categorical variables
+
+Q19. Which situation makes linear regression inappropriate?
+→ Independent variables are correlated
+
+Q20. Elastic Net is a combination of which two regularization techniques?
+→ Lasso and Ridge
